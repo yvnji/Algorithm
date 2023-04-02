@@ -1,7 +1,3 @@
 function solution(n) {
-    var answer = [];
-    for(let i = (n + '').length - 1; i >= 0; i--) {
-        answer.push((n + '')[i]);
-    }
-    return answer.map(str => parseInt(str));
+    return n.toString().split('').reverse().map(str => parseInt(str));
 }
