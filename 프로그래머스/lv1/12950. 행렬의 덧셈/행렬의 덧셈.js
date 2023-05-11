@@ -1,15 +1,3 @@
-function solution(arr1, arr2) {
-    const rows = arr1.length;
-    const cols = arr1[0].length;
-    const answer = [];
-
-    for(let i = 0; i < rows; i++) {
-        const row = [];
-        for(let j = 0; j < cols; j++) {
-            row.push(arr1[i][j] + arr2[i][j]);
-        }
-        answer.push(row);
-    }
-
-    return answer;
+function solution(arr1,arr2){
+    return arr1.map((arr1, idx1) => arr1.map((val, idx2) => val+arr2[idx1][idx2]));
 }
